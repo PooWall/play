@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">	
+		<title>淘宝网 - 淘！我喜欢</title>
+</head>
+<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+
+<body>
+	
+<div class="login"></div>
+
+<div class="col">
+	<div class="col-item">
+		<div class="col-item-cont col-item-cont-1">
+			<input id="name" type="text" value="" placeholder="手机号/邮箱/会员名"/>
+		</div>
+		<div class="error error-1">×</div>
+	</div>
+	<div class="col-item">
+		<div class="col-item-cont col-item-cont-1">
+			<input id="password" type="password" value="" placeholder="请输入密码"/>
+			<!--<input id="show" type="text" value="" placeholder="请输入密码"/>-->
+		</div>
+		<div class="error error-2">×</div>
+		<div class="eye"><div class="cir"></div></div>
+	</div>
+</div>
+
+<div class="other-link">
+	<div class="link-cont">
+		<a href="">免费注册</a>
+		<a class="tex-right" href="">忘记密码</a>
+	</div>
+</div>
+
+<div class="submit-btn">
+	<button class="btn sub-login">登录</button>
+</div>
+
+<div class="submit-btn message">
+	<button class="btn btn-message">短信验证码登录</button>
+</div>    
+
+
+<script type="text/javascript">
+	var a = 1;
+	$(".eye").click(function(){
+		if(a == 1){
+			$("#password").attr("type","");
+			a = 2;
+		}else if(a == 2){
+			$("#password").attr("type","password");
+			a = 1;
+		}
+	})
+	$(document).click(function(){
+		$(".error-1").hide();
+	})
+	$("#name").bind('input propertychange',function(){
+		var name = $("#name").val();
+		if(name != ""){
+			$(".error-1").show();
+		}else{
+			$(".error-1").hide();
+		}
+	})
+	$("#name").click(function(event){
+		event.stopPropagation();
+		var name = $("#name").val();
+		if(name != ""){
+			$(".error-1").show();
+			
+		}else{
+			$(".error-1").hide();
+		}
+	})
+	$(".error-1").click(function(event){
+		event.stopPropagation();
+		$("#name").val("");
+		$(".error-1").hide();
+	})
+	
+	$(document).click(function(){
+		$(".error-2").hide();
+	})
+	$("#password").bind('input propertychange',function(){
+		var keyWord = $("#password").val();
+		if( keyWord != ""){
+			$(".error-2").show();
+		}else{
+			$(".error-2").hide();
+		}
+	})
+	$("#password").click(function(event){
+		event.stopPropagation();
+		var keyWord =$("#password").val();
+		if(keyWord != ""){
+			$(".error-2").show();
+		}else{
+			$(".error-2").hide();
+		}
+	})
+	$(".error-2").click(function(event){
+		event.stopPropagation();
+		$("#password").val("");
+		$(".error-2").hide();
+	})
+
+//	$("#password").blur(function(){
+//			$(".error-2").hide();
+//	})
+//	var a = 1;
+//	$(".eye").click(function(){
+//		if(a == 1){
+//			var keyWord = $("#password").val();
+//			$("#password").hide();
+//			var show = $("#show").val(keyWord);
+//			$("#show").show();
+//			a = 2;
+//		}else if(a == 2){
+//			$("#show").hide();
+//			$("#password").show();
+//			a = 1;
+//		}
+//	})
+	$("#name").bind('input propertychange',function(){
+		var name = $("#name").val();
+		var keyWord = $("#password").val();
+		if(name != "" && keyWord != ""){
+			$(".sub-login").css({"opacity":"1"});
+		}else{
+			$(".sub-login").css({"opacity":"0.3"});
+		}
+	})
+	$("#password").bind('input propertychange',function(){
+		var name = $("#name").val();
+		var keyWord =$("#password").val();
+		if(name != "" && keyWord != ""){
+			$(".sub-login").css({"opacity":"1"});
+		}else{
+			$(".sub-login").css({"opacity":"0.3"});
+		}
+	})
+	$("#show").bind('input propertychang',function(){
+		var name = $("#name").val();
+		var showWord = $("#show").val();
+		if(name != "" && showWord != ""){
+			$(".sub-login").css({"opacity":"1"});
+		}else{
+			$(".sub-login").css({"opacity":"0.3"});
+		}
+	})
+</script>
+</body>
+</html>

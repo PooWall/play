@@ -1,0 +1,142 @@
+@charset "utf-8";
+body{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.login{
+	box-sizing: border-box;
+	width: 100%;
+	height: 4.9333rem;
+	background: url(https://gw.alicdn.com/tfs/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png) center no-repeat;
+	background-size: contain;
+	margin: 48px auto 0;
+	
+}
+.col{
+	width: 100%;
+	margin: 0 auto;
+	color: #333333;
+	position: relative;
+	padding: 0 1.4rem;
+	box-sizing: border-box;
+}
+.col .col-item{
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	margin: 50px 0 0;
+	font-size: 17px;
+	color: #333;
+	border-bottom: 1px solid #ff5000;
+}
+.col .col-item .error{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 12px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 50%;
+	background: #C0C0C0;
+	position: absolute;
+	right: 6px;
+	top: 0;
+}
+.col .col-item .error-1{
+	display: none;
+}
+.col .col-item .error-2{
+	display: none;
+	position: absolute;
+	right: 36px;
+	top: 0;
+}
+.col .col-item .eye{
+	display: inline-block;
+	width: 15px;
+	height: 11px;
+	line-height: 5px;
+	text-align: center;
+	border: 0.5px solid #F0AD4E;
+	border-radius: 50%;
+	position: absolute;
+	right: 6px;
+	top: 2px;
+}
+.col .col-item .eye .cir{
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border: 0.5px solid #F0AD4E;
+	border-radius: 50%;
+}
+.col .col-item input{
+	box-sizing: border-box;
+	width: 89%;
+	font-size: 1rem;
+	position: relative;
+	top: -8px;
+	margin-left: 4px;
+	border: none;
+	outline: none;
+}
+.col .col-item input[type="password"]{
+	width: 80%;
+}
+.col .col-item #show{
+	display: none;
+}
+.other-link{
+	box-sizing: border-box;
+	padding: 0 1.2rem;
+}
+.link-cont{
+	box-sizing: border-box;
+	padding: 0 3px;
+	margin-top: 14px;
+	position: relative;
+}
+.tex-right{
+	position: absolute;
+	right: 0;
+}
+.link-cont a{
+	font-size: 0.9rem;
+	color: #555;
+}
+.submit-btn{
+	padding: 35px 22px 0;
+}
+.btn {
+    font-size: 16px;
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    border-radius: 44px;
+    text-align: center;
+    border: 0;
+}
+.sub-login{
+	color: #fff;
+	letter-spacing: 4px;
+	background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+	background: linear-gradient(left,#ff9000,#ff5000) no-repeat;
+    box-shadow: 0 0.08rem 0.16rem #f7c7b1;
+    opacity: 0.3;
+
+}
+.message{
+	padding: 24px 22px 0;
+}
+.btn-message{
+	border: 1px solid #ff5000;
+    color: #ff5000;
+    background: #fff;
+
+}

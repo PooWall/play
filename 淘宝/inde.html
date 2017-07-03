@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>购物车</title>
+<head>
+<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+
+
+<body>
+		<div>
+			<span class="price" style="color: red;">500</span>
+			<span class="reduce">-</span>
+			<span class="num">0</span>
+			<span class="add">+</span>
+
+		</div>
+		<div style="height: 200px;"></div>
+		<div>
+			<span class="price" style="color: red;">1000</span>
+			<span class="reduce">-</span>
+			<span class="num">0</span>
+			<span class="add">+</span>
+
+		</div>
+		
+		
+		<div>
+			<i style="color: #f50;">0</i>圆
+		</div>
+	
+<script type="text/javascript">
+		
+		$(".add").click(function(){
+			var a = $(this).siblings(".num").html(); //获取数量
+			var a = parseInt(a); 
+			var a = a + 1;
+			$(this).siblings(".num").html(a); //获取数量的值
+			 b = $("div i").html(); // 获取商品总价格
+			 b = parseInt(b); 
+			var c =$(this).siblings(".price").html(); //获取商品价格
+			var c = parseInt(c);
+			var d = c * a;
+			  
+			$("div i").html(d);
+		})
+//		$(".reduce").click(function(){
+//			var a = $(this).siblings(".num").html();
+//			var a = parseInt(a);
+//			var a = a - 1;
+//			$(this).siblings(".num").html(a);
+////			 b = $("div i").html();
+////			 b = parseInt(b);
+//			var c =$(this).siblings(".price").html();
+//			var c = parseInt(c);
+//			var d = c * a;
+//			$("div i").html(b + d);
+//		})
+
+</script>		
+		
+	
+</body>
+
+
+</html>
